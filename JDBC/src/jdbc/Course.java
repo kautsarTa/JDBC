@@ -23,7 +23,7 @@ public class Course {
 	public boolean storeData() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","root", "0162413618Kr_92");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","username", "password");
 			String sql = "INSERT INTO courses (code, course_name) VALUES (?,?)";
 			PreparedStatement statement = con.prepareStatement(sql);
 			statement.setString(1, getCode());
@@ -41,7 +41,7 @@ public class Course {
 	public boolean updateData(int id) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","root", "0162413618Kr_92");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","username", "password");
 			String sql = "UPDATE courses SET code =?, course_name = ?  WHERE course_id=?";
 			PreparedStatement statement = con.prepareStatement(sql);
 			statement.setString(1, getCode());
@@ -61,7 +61,7 @@ public class Course {
 	public boolean deleteData(int id) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","root", "0162413618Kr_92");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=false&useSSL=false","username", "password");
 			String sql = "DELETE From courses WHERE course_id = ?";
 			PreparedStatement statement = con.prepareStatement(sql);
 			statement.setInt(1, id);
