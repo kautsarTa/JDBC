@@ -21,7 +21,7 @@
            String sql = "";
            int count = 0;
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=true&useSSL=false","root","0162413618Kr_92");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=true&useSSL=false","username","password");
            sql="SELECT * FROM courses";
            Statement statement = con.createStatement();                
            ResultSet resultSet = statement.executeQuery(sql);
