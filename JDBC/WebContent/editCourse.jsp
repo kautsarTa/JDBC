@@ -17,7 +17,7 @@
 <%
 	int id = Integer.parseInt(request.getParameter("id"));
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=true&useSSL=false","root","0162413618Kr_92");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapp?autoReconnect=true&useSSL=false","username","password");
 	String sql = "SELECT * From courses WHERE course_id =?";
 	PreparedStatement statement = con.prepareStatement(sql);
 	statement.setInt(1,id);
