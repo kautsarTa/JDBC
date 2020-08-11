@@ -58,7 +58,7 @@ public class CourseController extends HttpServlet {
 					RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
 					rd.forward(request, response);
 				}else {
-					RequestDispatcher rd = request.getRequestDispatcher("form.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("newCourse.jsp");
 					rd.forward(request, response);
 				}
 				
